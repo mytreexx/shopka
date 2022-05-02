@@ -8,7 +8,7 @@ class WatchlistStore {
         makeAutoObservable(this)
     }
 
-    watchlist = {}
+    watchlist = []
 
     getWatchlist = async () => {
         try {
