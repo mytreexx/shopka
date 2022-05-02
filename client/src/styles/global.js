@@ -161,6 +161,6 @@ export const useStyles = makeStyles((theme) => ({
         height: 'calc(100vh - 300px)'
     },
     selectContainer: {
-        width: 150
+        width: 170
     }
 }))
