@@ -13,7 +13,7 @@ import { WatchButtonSm } from './WatchButtonSm'
 const ProductCardVertical = (props) => {
     const classes = useStyles()
     const { product, watchlist } = props
-    const isWatched = useMemo(() => watchlist.some(watchedItem => watchedItem === product.id), [product, watchlist])
+    const isWatched = useMemo(() => watchlist?.some(watchedItem => watchedItem === product.id), [product, watchlist])
 
     const handleWatch = (id) => {
         if (isWatched) {
@@ -51,8 +51,8 @@ const ProductCardVertical = (props) => {
                         <Rating
                             readOnly
                             size='small'
-                            value={product.rating}
-                            max={product.rating}
+                            value={Math.floor(product.rating)}
+                            max={Math.floor(product.rating)}
                         />
                         <span>{product.rating}</span>
                     </Grid>
